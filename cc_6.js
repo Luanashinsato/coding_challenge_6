@@ -43,3 +43,13 @@ const calculateSubscriptionCost = (plan, months, discount = 0) => {
 // Testing the function
 calculateSubscriptionCost("Basic", 6, 10); 
 calculateSubscriptionCost("Premium", 12, 0);
+
+// Task 5: Returning Values
+// Writing a function that returns the converted currency amount
+function convertCurrency(amount, exchangeRate) {
+    const currency = (amount * exchangeRate).toFixed(2);
+    console.log(`Converted Amount: $${currency}`);
+}
+// Testing the function 
+convertCurrency(100, 1.1);
+convertCurrency(250, 0.85);
