@@ -32,3 +32,14 @@ const calculateBonus = (salary, performanceRating) => {
 // Testing the function
 calculateBonus(5000, "Excellent");
 calculateBonus(7000, "Good");
+
+// Task 4: Parameters and Arguments
+// Writing a function that calculates subscription cost
+const calculateSubscriptionCost = (plan, months, discount = 0) => {
+    const rates = {Basic: 10, Premium: 20, Enterprise: 50};
+    const totalCost = (rates[plan] * months) - discount;
+    console.log(`Total Cost: $${totalCost}`);
+};
+// Testing the function
+calculateSubscriptionCost("Basic", 6, 10); 
+calculateSubscriptionCost("Premium", 12, 0);
