@@ -53,3 +53,9 @@ function convertCurrency(amount, exchangeRate) {
 // Testing the function 
 convertCurrency(100, 1.1);
 convertCurrency(250, 0.85);
+
+// Task 6: Higher-Order Functions
+let orders = [200, 600, 1200, 450, 800]; // Declaring an array orders
+const applyBulkDiscount = (orders, discountFunction) => orders.map(discountFunction); // Writing a higher-order function 
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Calling the function with a discount strategy
+console.log(discountedOrders); // Logging the result
