@@ -59,3 +59,17 @@ let orders = [200, 600, 1200, 450, 800]; // Declaring an array orders
 const applyBulkDiscount = (orders, discountFunction) => orders.map(discountFunction); // Writing a higher-order function 
 let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // Calling the function with a discount strategy
 console.log(discountedOrders); // Logging the result
+
+// Task 7: Closures
+// Writing a function that returns another function to add expenses and keep a running total
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(amount) {
+        totalExpenses += amount;
+        return `Total Expenses: $${totalExpenses}`;
+    };
+}
+// Testing the data 
+let tracker = createExpenseTracker();
+console.log(tracker(200)); 
+console.log(tracker(150)); 
